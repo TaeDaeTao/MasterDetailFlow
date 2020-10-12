@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MasterDetailFlow</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="apple">Apple</string>
+    <string name="cake">Cake</string>
+    <string name="pear">Pear</string>
+    <string name="spinach">Spinach</string>
+    <string name="beets">Beets</string>
+    <string name="pickle">Pickle</string>
+    <string name="sprouts">Sprouts</string>
+    <string name="yam">Yam</string>
+    <string name="recipes">Recipes</string>
+</resources>
