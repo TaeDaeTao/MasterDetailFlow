@@ -8,140 +8,17 @@
     android:orientation="vertical"
     tools:context=".SplashScreen">
 
-    <LinearLayout
-        android:id="@+id/layoutHorizontalTop"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:baselineAligned="false">
-
-        <LinearLayout
-            android:id="@+id/layoutVerticleTopLeft"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imgApple"
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:alpha="0.5"
-                android:contentDescription="@string/apple"
-                android:cropToPadding="false"
-                app:srcCompat="@drawable/apetizing_apple" />
-
-            <ImageView
-                android:id="@+id/imgCake"
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:alpha="0.5"
-                android:contentDescription="@string/cake"
-                app:srcCompat="@drawable/carefree_cake" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutVerticleTopRight"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imgBeets"
-                android:layout_width="match_parent"
-                android:layout_height="138dp"
-                android:alpha="0.5"
-                android:contentDescription="@string/beets"
-                app:srcCompat="@drawable/beautiful_beets" />
-
-            <ImageView
-                android:id="@+id/imgPickle"
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:alpha="0.5"
-                android:contentDescription="@string/pickle"
-                app:srcCompat="@drawable/powerful_pickle" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layoutCenter"
+    <TextView
+        android:id="@+id/txtTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/txtTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="@string/recipes"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="30sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layoutHorizontalBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:baselineAligned="false"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/layoutVerticleBottomLeft"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imgPear"
-                android:layout_width="match_parent"
-                android:layout_height="138dp"
-                android:alpha="0.5"
-                android:contentDescription="@string/pear"
-                app:srcCompat="@drawable/pretty_pear" />
-
-            <ImageView
-                android:id="@+id/imgSpinach"
-                android:layout_width="match_parent"
-                android:layout_height="146dp"
-                android:alpha="0.5"
-                android:contentDescription="@string/spinach"
-                app:srcCompat="@drawable/strong_spinach" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutVerticleBottomRight"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imgSprouts"
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:alpha="0.5"
-                android:contentDescription="@string/sprouts"
-                app:srcCompat="@drawable/shy_sprouts" />
-
-            <ImageView
-                android:id="@+id/imgYam"
-                android:layout_width="match_parent"
-                android:layout_height="151dp"
-                android:alpha="0.5"
-                android:contentDescription="@string/yam"
-                app:srcCompat="@drawable/yummy_yam" />
-
-        </LinearLayout>
-
-    </LinearLayout>
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/splash_bkg"
+        android:gravity="center"
+        android:text="@string/recipes"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="50sp" />
 
 </LinearLayout>

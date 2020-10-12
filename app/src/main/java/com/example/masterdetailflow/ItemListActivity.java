@@ -19,6 +19,8 @@ import android.widget.TextView;
 
 import com.example.masterdetailflow.dummy.DummyContent;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 /**
@@ -117,8 +119,8 @@ public class ItemListActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
-            holder.mIdView.setText(mValues.get(position).recipeId);
             holder.mContentView.setText(mValues.get(position).recipeName);
+            holder.mDetailsView.setText(mValues.get(position).recipeIng);
 
             holder.itemView.setTag(mValues.get(position));
             holder.itemView.setOnClickListener(mOnClickListener);
@@ -130,13 +132,13 @@ public class ItemListActivity extends AppCompatActivity {
         }
 
         class ViewHolder extends RecyclerView.ViewHolder {
-            final TextView mIdView;
             final TextView mContentView;
+            final TextView mDetailsView;
 
             ViewHolder(View view) {
                 super(view);
-                mIdView = (TextView) view.findViewById(R.id.id_text);
-                mContentView = (TextView) view.findViewById(R.id.content);
+                mContentView = (TextView) view.findViewById(R.id.txtListIng);
+                mDetailsView =(TextView) view.findViewById(R.id.txtListDetails);
             }
         }
     }
