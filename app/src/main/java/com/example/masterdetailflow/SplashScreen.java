@@ -15,7 +15,7 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         //Setting up intro music
-        final MediaPlayer mdIntro = MediaPlayer.create(this, R.raw.intro_audio);
+        final MediaPlayer mdIntro = MediaPlayer.create(this, R.raw.intro);
         mdIntro.start();
 
         //Launch main activity after 5 seconds

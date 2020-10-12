@@ -2,16 +2,13 @@ package com.example.masterdetailflow;
 
 import android.app.Activity;
 import android.os.Bundle;
-
 import com.google.android.material.appbar.CollapsingToolbarLayout;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.masterdetailflow.dummy.DummyContent;
 
 /**
@@ -52,7 +49,7 @@ public class ItemDetailFragment extends Fragment {
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
-                appBarLayout.setTitle(mItem.content);
+                appBarLayout.setTitle(mItem.recipeName);
             }
         }
     }
@@ -64,7 +61,12 @@ public class ItemDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.details);
+            TextView recipeIng = rootView.findViewById(R.id.txtIng);
+            ImageView recipeImg = rootView.findViewById(R.id.imgRecipe);
+
+            recipeImg.setImageResource(mItem.recipeImg);
+            recipeIng.setText(mItem.recipeIng);
+            //((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.details);
         }
 
         return rootView;

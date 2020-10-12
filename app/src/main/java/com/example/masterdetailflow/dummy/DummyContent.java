@@ -73,28 +73,28 @@ public class DummyContent {
 
     private static void addItem(DummyItem item) {
         ITEMS.add(item);
-        ITEM_MAP.put(item.id, item);
+        ITEM_MAP.put(item.recipeId, item);
     }
 
     /**
      * A dummy item representing a piece of content.
      */
     public static class DummyItem {
-        public String id;         // Recipe ID
-        public String content;    // Recipe Name
-        public String details;    // Recipe Details
+        public String recipeId;         // Recipe ID
+        public String recipeName;    // Recipe Name
+        public String recipeIng;    // Recipe Details
         public int recipeImg;     // Recipe Image
 
         public DummyItem(String idNum, String name, String ingredients, int image) {
-            this.id = idNum;
-            this.content = name;
-            this.details = ingredients;
+            this.recipeId = idNum;
+            this.recipeName = name;
+            this.recipeIng = ingredients;
             this.recipeImg = image;
         }
 
         @Override
         public String toString() {
-            return content;
+            return recipeName;
         }
     }
 }

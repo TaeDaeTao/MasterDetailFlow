@@ -10,4 +10,5 @@
     <string name="sprouts">Sprouts</string>
     <string name="yam">Yam</string>
     <string name="recipes">Recipes</string>
+    <string name="recipe_image">Recipe Image</string>
 </resources>
