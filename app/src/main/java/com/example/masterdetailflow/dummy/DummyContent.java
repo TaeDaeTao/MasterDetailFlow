@@ -1,5 +1,6 @@
 package com.example.masterdetailflow.dummy;
 
+import com.example.masterdetailflow.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,20 +17,58 @@ public class DummyContent {
     /**
      * An array of sample (dummy) items.
      */
-    public static final List<DummyItem> ITEMS = new ArrayList<DummyItem>();
+    public static final List<DummyItem> ITEMS = new ArrayList<>();
 
     /**
      * A map of sample (dummy) items, by ID.
      */
-    public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
-
-    private static final int COUNT = 25;
+    public static final Map<String, DummyItem> ITEM_MAP = new HashMap<>();
 
     static {
-        // Add some sample items.
-        for (int i = 1; i <= COUNT; i++) {
-            addItem(createDummyItem(i));
-        }
+        // Add items.
+        String detailsOne = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+        String detailsTwo = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+        addItem(new DummyItem(
+                "1",
+                "Appetizing Apple",
+                detailsOne,
+                R.drawable.apetizing_apple));
+        addItem(new DummyItem(
+                "2",
+                "Beautiful Beets",
+                detailsTwo,
+                R.drawable.beautiful_beets));
+        addItem(new DummyItem(
+                "3",
+                "Carefree Cake",
+                detailsOne,
+                R.drawable.carefree_cake));
+        addItem(new DummyItem(
+                "4",
+                "Powerful Pickel",
+                detailsTwo,
+                R.drawable.powerful_pickle));
+        addItem(new DummyItem(
+                "5",
+                "Pretty Pear",
+                detailsOne,
+                R.drawable.pretty_pear));
+        addItem(new DummyItem(
+                "6",
+                "Shy Sprouts",
+                detailsTwo,
+                R.drawable.shy_sprouts));
+        addItem(new DummyItem(
+                "7",
+                "Strong Spinach",
+                detailsOne,
+                R.drawable.strong_spinach));
+        addItem(new DummyItem(
+                "8",
+                "Yummy Yam",
+                detailsTwo,
+                R.drawable.yummy_yam));
     }
 
     private static void addItem(DummyItem item) {
@@ -37,31 +76,20 @@ public class DummyContent {
         ITEM_MAP.put(item.id, item);
     }
 
-    private static DummyItem createDummyItem(int position) {
-        return new DummyItem(String.valueOf(position), "Item " + position, makeDetails(position));
-    }
-
-    private static String makeDetails(int position) {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Details about Item: ").append(position);
-        for (int i = 0; i < position; i++) {
-            builder.append("\nMore details information here.");
-        }
-        return builder.toString();
-    }
-
     /**
      * A dummy item representing a piece of content.
      */
     public static class DummyItem {
-        public final String id;
-        public final String content;
-        public final String details;
+        public String id;         // Recipe ID
+        public String content;    // Recipe Name
+        public String details;    // Recipe Details
+        public int recipeImg;     // Recipe Image
 
-        public DummyItem(String id, String content, String details) {
-            this.id = id;
-            this.content = content;
-            this.details = details;
+        public DummyItem(String idNum, String name, String ingredients, int image) {
+            this.id = idNum;
+            this.content = name;
+            this.details = ingredients;
+            this.recipeImg = image;
         }
 
         @Override
